@@ -7,6 +7,11 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  // https://nuxtjs.org/deployments/github-pages/ TLDR: we assume that the website root will be /, but in this case it is /<repository-name>
+  router: {
+    base: '/nuxt-spa/'
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - static-daze',
