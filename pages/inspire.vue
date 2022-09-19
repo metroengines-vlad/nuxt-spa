@@ -2,24 +2,54 @@
   <v-row>
     <v-col class="text-center">
       <img
-        src="/v.png"
+        src="/nuxt-spa/v.png"
         alt="Vuetify.js"
         class="mb-5"
       >
-      <blockquote class="blockquote">
-        &#8220;First, solve the problem. Then, write the code.&#8221;
+      <blockquote v-if="quoteReady" class="blockquote">
+        &#8220;{{ quote.content }}&#8221;
         <footer>
           <small>
-            <em>&mdash;John Johnson</em>
+            <em>&mdash;{{ quote.author }}</em>
           </small>
         </footer>
       </blockquote>
+
+      <button @click="fetch">
+        refresh
+      </button>
     </v-col>
   </v-row>
 </template>
 
 <script>
 export default {
-  name: 'InspirePage'
+  name: 'InspirePage',
+
+  data () {
+    return {
+      quote: {}
+    }
+  },
+
+  computed: {
+    quoteReady () {
+      if (this.quote) {
+        return true
+      }
+
+      return false
+    }
+  },
+
+  methods: {
+    async fetch () {
+      this.quote = await fetch(
+        'https://api.quotable.io/random'
+      ).then(res => res.json())
+
+      console.log('yoooo!', this.quote)
+    }
+  }
 }
 </script>
