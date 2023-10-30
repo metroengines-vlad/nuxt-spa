@@ -1,23 +1,42 @@
-# static-daze
+# Nuxt 3
 
-## Build Setup
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+
+## Setup
+Install the dependencies:
 
 ```bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
-
-# deploy the generated `dist` to github pages' gh-pages branch
-$ yarn deploy
+# yarn
+yarn install
 ```
 
-## Special Instructions...
+## Development Server
+Start the development server on `http://localhost:3000`:
+
+```bash
+# yarn
+yarn dev
+```
+
+## Production
+Build the application for production:
+
+```bash
+# yarn
+yarn build
+```
+
+Locally preview production build:
+
+```bash
+# yarn
+yarn preview
+```
+
+## Deploy to Github pages
+First, build the project into `dist` and then push it into `gh-pages` branch on github
+```bash
+# yarn
+yarn build
+yarn deploy
+```
