@@ -1,3 +1,5 @@
+import { defineNuxtConfig } from 'nuxt/config'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -7,7 +9,8 @@ export default defineNuxtConfig({
 //   // Target: https://go.nuxtjs.dev/config-target
 //   target: 'static',
 
-//   // https://nuxtjs.org/deployments/github-pages/ TLDR: we assume that the website root will be /, but in this case it is /<repository-name>
+//   // https://nuxtjs.org/deployments/github-pages/
+//   // TLDR: we assume that the website root will be /, but in this case it is /<repository-name>
 //   router: {
 //     base: '/nuxt-spa/'
 //   },
@@ -111,7 +114,8 @@ export default defineNuxtConfig({
 
 //   // Axios module configuration: https://go.nuxtjs.dev/config-axios
 //   axios: {
-//     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
+//     // Workaround to avoid enforcing hard-coded localhost:3000:
+//     // https://github.com/nuxt-community/axios-module/issues/308
 //     baseURL: '/'
 //   },
 
