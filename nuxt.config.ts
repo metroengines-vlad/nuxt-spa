@@ -29,11 +29,11 @@ export default defineNuxtConfig({
 //     ]
 //   },
 
-//   loadingIndicator: {
-//     name: 'chasing-dots',
-//     color: '#007aff'
-//     // background: 'white'
-//   },
+  loadingIndicator: {
+    name: 'chasing-dots',
+    color: '#007aff'
+    // background: 'white'
+  },
 
   modules: [
     '@nuxtjs/eslint-module',
